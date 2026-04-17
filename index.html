@@ -1,123 +1,171 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KONKRETO S.A.S.</title>
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ShieldCheck, TrendingUp, MessageCircle, AlertTriangle, HelpCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
-  <style>
-    body { font-family: Arial; margin:0; background:#f5f5f5; }
+export default function KonkretoLanding() {
+  const whatsappNumber = "573246844406"; // CAMBIA ESTO
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20quiero%20evaluar%20un%20inmueble%20con%20KONKRETO`;
 
-    .box {
-      background:white;
-      margin:20px auto;
-      padding:25px;
-      max-width:800px;
-      border-radius:10px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    }
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
 
-    .hero {
-      background:#0f172a;
-      color:white;
-      text-align:center;
-      padding:70px 20px;
-    }
+      {/* HERO */}
+      <section className="text-center py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-bold"
+        >
+          KONKRETO S.A.S.
+        </motion.h1>
 
-    .btn {
-      display:inline-block;
-      margin-top:15px;
-      padding:14px 20px;
-      background:#25D366;
-      color:white;
-      text-decoration:none;
-      border-radius:8px;
-      font-weight:bold;
-    }
+        <p className="mt-4 text-lg text-gray-600">
+          Plataforma de ingeniería y análisis inmobiliario
+        </p>
 
-    h2 { border-left:5px solid #25D366; padding-left:10px; }
-    .tag { color:#666; font-size:14px; }
-  </style>
-</head>
+        <p className="mt-2 text-sm text-gray-500 max-w-2xl mx-auto">
+          Evita comprar inmuebles con errores ocultos técnicos, legales o financieros.
+        </p>
 
-<body>
+        <div className="mt-8 flex justify-center">
+          <a href={whatsappLink} target="_blank">
+            <Button className="text-lg px-6 py-6 rounded-2xl flex gap-2">
+              <MessageCircle /> Evaluar mi inmueble ahora
+            </Button>
+          </a>
+        </div>
+      </section>
 
-<!-- ================= HERO ================= -->
-<div class="hero">
+      {/* SERVICES */}
+      <section className="grid md:grid-cols-2 gap-6 px-6 py-16 max-w-6xl mx-auto">
 
-  <!-- ✏️ EDITA AQUÍ -->
-  <h1>KONKRETO S.A.S.</h1>
-  <p>Plataforma de ingeniería y análisis inmobiliario</p>
-  <p>Evita comprar inmuebles con errores ocultos</p>
+        <Card>
+          <CardContent className="p-6">
+            <ShieldCheck className="mb-3" />
+            <h3 className="font-bold">Due Diligence Inmobiliaria</h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Revisión de riesgos legales, técnicos y urbanísticos antes de invertir.
+            </p>
+          </CardContent>
+        </Card>
 
-  <a class="btn" href="https://wa.me/573246844406?text=Hola%20quiero%20evaluar%20un%20inmueble">
-    💬 WhatsApp
-  </a>
+        <Card>
+          <CardContent className="p-6">
+            <TrendingUp className="mb-3" />
+            <h3 className="font-bold">Viabilidad de Inversión</h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Analizamos si el inmueble realmente es rentable o una mala decisión.
+            </p>
+          </CardContent>
+        </Card>
 
-</div>
+      </section>
 
-<!-- ================= QUE ES ================= -->
-<div class="box">
+      {/* PRICING */}
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold">Planes de análisis</h2>
 
-  <h2>🧠 ¿Qué es KONKRETO?</h2>
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
 
-  <!-- ✏️ EDITA AQUÍ -->
-  <p>
-    KONKRETO S.A.S. es una firma de análisis inmobiliario que evalúa riesgos técnicos, legales y de inversión antes de tomar decisiones.
-  </p>
+            <Card>
+              <CardContent className="p-6">
+                <p className="font-bold">Básico</p>
+                <p className="text-sm mt-2">$400.000 COP</p>
+                <p className="text-xs text-gray-500 mt-2">Diagnóstico inicial de riesgo</p>
+              </CardContent>
+            </Card>
 
-</div>
+            <Card>
+              <CardContent className="p-6">
+                <p className="font-bold">Intermedio</p>
+                <p className="text-sm mt-2">$800.000 COP</p>
+                <p className="text-xs text-gray-500 mt-2">Análisis técnico + inversión</p>
+              </CardContent>
+            </Card>
 
-<!-- ================= SERVICIOS ================= -->
-<div class="box">
+            <Card>
+              <CardContent className="p-6 border-2 border-black">
+                <p className="font-bold">Completo</p>
+                <p className="text-sm mt-2">$1.500.000 COP</p>
+                <p className="text-xs text-gray-500 mt-2">Evaluación total del inmueble</p>
+              </CardContent>
+            </Card>
 
-  <h2>🧩 Servicios</h2>
+          </div>
+        </div>
+      </section>
 
-  <!-- ✏️ EDITA AQUÍ -->
-  <p>🔍 Due Diligence Inmobiliaria</p>
-  <p>🏗️ Diagnóstico técnico</p>
-  <p>📊 Viabilidad de inversión</p>
-  <p>🧱 Estructuración de proyectos</p>
+      {/* RISK SECTION */}
+      <section className="py-16 px-6 max-w-5xl mx-auto">
+        <div className="text-center">
+          <AlertTriangle className="mx-auto mb-4" />
+          <h2 className="text-2xl font-bold">Antes de comprar, considera esto</h2>
+          <p className="text-gray-600 mt-3">
+            Muchos inmuebles en Cartagena tienen sobreprecio, problemas legales o fallas estructurales ocultas.
+            Una mala decisión puede costarte años de pérdida de capital.
+          </p>
+        </div>
+      </section>
 
-</div>
+      {/* PROCESS */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold">Cómo trabajamos</h2>
 
-<!-- ================= PLANES ================= -->
-<div class="box">
+          <div className="mt-10 grid md:grid-cols-3 gap-6">
+            <div>
+              <p className="font-bold">1. Envías el inmueble</p>
+              <p className="text-sm text-gray-600">Compartes la propiedad o proyecto.</p>
+            </div>
+            <div>
+              <p className="font-bold">2. Analizamos riesgos</p>
+              <p className="text-sm text-gray-600">Estudio técnico, legal y financiero.</p>
+            </div>
+            <div>
+              <p className="font-bold">3. Decisión clara</p>
+              <p className="text-sm text-gray-600">Te decimos si conviene o no invertir.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <h2>💰 Planes y precios</h2>
+      {/* FAQ */}
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10">Preguntas frecuentes</h2>
 
-  <!-- ✏️ EDITA AQUÍ -->
-  <p>🔍 Básico: $400.000 COP</p>
-  <p>📊 Intermedio: $800.000 COP</p>
-  <p>🏗️ Completo: $1.500.000 COP</p>
+          <div className="space-y-4">
+            <p><strong>¿Cuánto tarda el análisis?</strong> Entre 24 y 72 horas según el caso.</p>
+            <p><strong>¿Sirve para inmuebles usados?</strong> Sí, aplica para usados, nuevos y proyectos.</p>
+            <p><strong>¿Incluye revisión legal?</strong> Sí, dentro del alcance del análisis.</p>
+            <p><strong>¿Cómo recibo el informe?</strong> Digital con recomendaciones claras.</p>
+          </div>
+        </div>
+      </section>
 
-</div>
+      {/* CTA */}
+      <section className="bg-black text-white text-center py-20 px-6">
+        <h2 className="text-3xl font-bold">No compres sin analizar</h2>
+        <p className="mt-4 text-gray-300">
+          Una decisión inmobiliaria mal tomada puede costarte mucho más que este análisis.
+        </p>
 
-<!-- ================= PROCESO ================= -->
-<div class="box">
+        <div className="mt-8">
+          <a href={whatsappLink} target="_blank">
+            <Button className="text-lg px-8 py-6 rounded-2xl">
+              <MessageCircle className="mr-2" /> Evaluar ahora
+            </Button>
+          </a>
+        </div>
+      </section>
 
-  <h2>⚙️ Cómo trabajamos</h2>
+      {/* FOOTER */}
+      <footer className="text-center py-8 text-sm text-gray-500">
+        KONKRETO S.A.S. • Ingeniería y análisis inmobiliario • Cartagena, Colombia
+      </footer>
 
-  <!-- ✏️ EDITA AQUÍ -->
-  <p>1. Nos contactas por WhatsApp</p>
-  <p>2. Analizamos el caso</p>
-  <p>3. Evaluamos el inmueble</p>
-  <p>4. Entregamos diagnóstico</p>
-
-</div>
-
-<!-- ================= CTA FINAL ================= -->
-<div class="box" style="text-align:center; background:#0f172a; color:white;">
-
-  <h2>🚀 ¿Quieres evaluar tu inmueble?</h2>
-
-  <p>Escríbenos y recibe un análisis profesional antes de decidir</p>
-
-  <a class="btn" href="https://wa.me/573246844406?text=Hola%20quiero%20evaluar%20un%20inmueble">
-    💬 Hablar ahora
-  </a>
-
-</div>
-
-</body>
-</html>
+    </div>
+  );
+}
