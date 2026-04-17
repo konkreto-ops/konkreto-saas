@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 export default function KonkretoLanding() {
 
   const whatsappNumber = "573246844406";
@@ -7,18 +5,20 @@ export default function KonkretoLanding() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20quiero%20evaluar%20un%20inmueble%20con%20KONKRETO`;
 
   return (
-    <div style={{ fontFamily: "Arial", color: "#111" }}>
+    <div style={{ fontFamily: "Arial", background: "#0b0f19", color: "white" }}>
 
       {/* HERO */}
-      <div style={{ textAlign: "center", padding: "80px 20px", background: "#111", color: "white" }}>
-        <h1 style={{ fontSize: "42px" }}>KONKRETO S.A.S.</h1>
+      <section style={{ textAlign: "center", padding: "80px 20px", background: "#111827" }}>
+        <h1 style={{ fontSize: "44px", fontWeight: "bold" }}>
+          🏢 KONKRETO S.A.S.
+        </h1>
 
-        <p style={{ fontSize: "18px", marginTop: "10px" }}>
-          Plataforma de ingeniería y análisis inmobiliario
+        <p style={{ fontSize: "18px", marginTop: "10px", color: "#cbd5e1" }}>
+          🧭 Plataforma de Ingeniería y Desarrollo Inmobiliario
         </p>
 
-        <p style={{ marginTop: "10px", color: "#ccc" }}>
-          Evita comprar inmuebles con errores ocultos
+        <p style={{ marginTop: "15px", color: "#94a3b8" }}>
+          “Convertimos inmuebles en decisiones técnicas, seguras y viables”
         </p>
 
         <a href={whatsappLink} target="_blank">
@@ -26,86 +26,117 @@ export default function KonkretoLanding() {
             marginTop: "25px",
             padding: "15px 25px",
             fontSize: "16px",
-            background: "#25D366",
+            background: "#22c55e",
             color: "white",
             border: "none",
             borderRadius: "10px",
             cursor: "pointer"
           }}>
-            💬 WhatsApp
+            💬 Evaluar inmueble ahora
           </button>
         </a>
-      </div>
+      </section>
 
-      {/* ABOUT */}
-      <div style={{ padding: "50px", maxWidth: "800px", margin: "auto" }}>
+      {/* MISION */}
+      <section style={{ padding: "60px 20px", background: "#0f172a" }}>
         <h2>🧠 ¿Qué es KONKRETO?</h2>
-        <p>
-          KONKRETO S.A.S. es una firma de análisis inmobiliario que evalúa riesgos técnicos,
-          legales y de inversión antes de tomar decisiones.
+        <p style={{ color: "#cbd5e1", maxWidth: "900px" }}>
+          Firma especializada en análisis inmobiliario, ingeniería y evaluación de riesgo
+          antes de decisiones de compra, inversión o desarrollo.
         </p>
-      </div>
 
-      {/* SERVICES */}
-      <div style={{ background: "#f5f5f5", padding: "50px" }}>
-        <h2 style={{ textAlign: "center" }}>🧩 Servicios</h2>
+        <h3 style={{ marginTop: "30px" }}>🎯 Misión</h3>
+        <p style={{ color: "#94a3b8" }}>
+          Reducir la incertidumbre en el sector inmobiliario mediante análisis técnico,
+          legal y financiero de activos.
+        </p>
+      </section>
 
-        <ul style={{ maxWidth: "600px", margin: "auto", lineHeight: "2" }}>
+      {/* SERVICIOS */}
+      <section style={{ padding: "60px 20px", background: "#111827" }}>
+        <h2>🧩 Servicios</h2>
+
+        <ul style={{ lineHeight: "2", color: "#cbd5e1" }}>
           <li>🔍 Due Diligence Inmobiliaria</li>
-          <li>🏗️ Diagnóstico técnico</li>
-          <li>📊 Viabilidad de inversión</li>
+          <li>🏗️ Diagnóstico técnico del inmueble</li>
+          <li>📊 Estudio de viabilidad inmobiliaria</li>
           <li>🧱 Estructuración de proyectos</li>
+          <li>🤝 Acompañamiento técnico continuo</li>
         </ul>
-      </div>
+      </section>
 
-      {/* MISSION */}
-      <div style={{ padding: "50px", textAlign: "center" }}>
-        <h2>🎯 Nuestra misión</h2>
-        <p style={{ maxWidth: "700px", margin: "auto" }}>
-          Proteger a inversionistas y compradores inmobiliarios evitando pérdidas económicas
-          mediante análisis técnico, legal y financiero de cada inmueble.
+      {/* FILOSOFIA DE COBRO */}
+      <section style={{ padding: "60px 20px", background: "#0f172a" }}>
+        <h2>🧠 Filosofía de Cobro</h2>
+
+        <p style={{ color: "#cbd5e1" }}>
+          KONKRETO no cobra por visitas ni intermediación.
         </p>
-      </div>
 
-      {/* PRICING */}
-      <div style={{ background: "#f5f5f5", padding: "50px", textAlign: "center" }}>
-        <h2>💰 Planes y precios</h2>
+        <ul style={{ color: "#94a3b8", lineHeight: "2" }}>
+          <li>📐 Análisis técnico</li>
+          <li>🧾 Reducción de riesgo</li>
+          <li>📊 Información estratégica</li>
+          <li>🏗️ Decisiones inmobiliarias estructuradas</li>
+        </ul>
+      </section>
 
-        <div style={{ lineHeight: "2" }}>
-          <p>🔍 Básico: $400.000 COP</p>
-          <p>📊 Intermedio: $800.000 COP</p>
-          <p>🏗️ Completo: $1.500.000 COP</p>
-        </div>
-      </div>
+      {/* SERVICIOS DETALLADOS */}
+      <section style={{ padding: "60px 20px", background: "#111827" }}>
+        <h2>🔍 Due Diligence y Análisis</h2>
 
-      {/* PROCESS */}
-      <div style={{ padding: "50px" }}>
-        <h2 style={{ textAlign: "center" }}>⚙️ Cómo trabajamos</h2>
+        <p style={{ color: "#cbd5e1" }}>
+          Evaluación de riesgos legales, técnicos y financieros antes de invertir.
+        </p>
 
-        <ol style={{ maxWidth: "600px", margin: "auto", lineHeight: "2" }}>
-          <li>Nos contactas por WhatsApp</li>
-          <li>Analizamos el caso</li>
-          <li>Evaluamos el inmueble</li>
-          <li>Entregamos diagnóstico</li>
-        </ol>
-      </div>
+        <h3>💰 Tarifas</h3>
+        <ul style={{ color: "#94a3b8" }}>
+          <li>🏠 Vivienda: $400.000 – $900.000 COP</li>
+          <li>🏢 Comercial: $900.000 – $1.800.000 COP</li>
+          <li>🏗️ Proyectos: $1.500.000 – $3.500.000 COP</li>
+        </ul>
+      </section>
 
-      {/* CTA */}
-      <div style={{
-        textAlign: "center",
-        padding: "80px",
-        background: "#111",
-        color: "white"
-      }}>
+      {/* VIABILIDAD */}
+      <section style={{ padding: "60px 20px", background: "#0f172a" }}>
+        <h2>📊 Viabilidad de Inversión</h2>
+
+        <p style={{ color: "#cbd5e1" }}>
+          Analizamos si el inmueble es realmente rentable o una mala decisión.
+        </p>
+
+        <h3>💰 Tarifas</h3>
+        <ul style={{ color: "#94a3b8" }}>
+          <li>🏠 Vivienda: $800.000 – $1.500.000 COP</li>
+          <li>🏢 Comercial: $1.500.000 – $3.000.000 COP</li>
+          <li>🏗️ Grandes proyectos: $3.000.000 – $6.000.000 COP</li>
+        </ul>
+      </section>
+
+      {/* DIFERENCIAL */}
+      <section style={{ padding: "60px 20px", background: "#111827" }}>
+        <h2>🧠 Diferencial KONKRETO</h2>
+
+        <p style={{ color: "#cbd5e1" }}>
+          No somos inmobiliaria. No vendemos propiedades.
+        </p>
+
+        <p style={{ color: "#94a3b8" }}>
+          Somos un filtro técnico que reduce riesgos y evita pérdidas económicas.
+        </p>
+      </section>
+
+      {/* CTA FINAL */}
+      <section style={{ padding: "80px 20px", textAlign: "center", background: "#22c55e", color: "black" }}>
         <h2>🚀 ¿Quieres evaluar tu inmueble?</h2>
-        <p>Recibe un análisis profesional antes de decidir</p>
+        <p>Recibe un análisis profesional antes de tomar decisiones</p>
 
         <a href={whatsappLink} target="_blank">
           <button style={{
             marginTop: "20px",
             padding: "15px 25px",
             fontSize: "16px",
-            background: "#25D366",
+            background: "black",
             color: "white",
             border: "none",
             borderRadius: "10px"
@@ -113,7 +144,12 @@ export default function KonkretoLanding() {
             💬 Hablar ahora
           </button>
         </a>
-      </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{ textAlign: "center", padding: "20px", background: "#0b0f19", color: "#64748b" }}>
+        KONKRETO S.A.S. • Ingeniería y análisis inmobiliario • Cartagena, Colombia
+      </footer>
 
     </div>
   );
