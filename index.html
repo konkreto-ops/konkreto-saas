@@ -7,33 +7,50 @@ export default function KonkretoLanding() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20quiero%20evaluar%20un%20inmueble%20con%20KONKRETO`;
 
   return (
-    <div style={{ fontFamily: "Arial", lineHeight: "1.6", color: "#111" }}>
+    <div style={{ fontFamily: "Arial", color: "#111" }}>
 
       {/* HERO */}
-      <div style={{ textAlign: "center", padding: "60px 20px", background: "#f5f5f5" }}>
-        <h1>KONKRETO S.A.S.</h1>
-        <p>Plataforma de ingeniería y análisis inmobiliario</p>
-        <p><b>Evita comprar inmuebles con errores ocultos</b></p>
+      <div style={{ textAlign: "center", padding: "80px 20px", background: "#111", color: "white" }}>
+        <h1 style={{ fontSize: "42px" }}>KONKRETO S.A.S.</h1>
+
+        <p style={{ fontSize: "18px", marginTop: "10px" }}>
+          Plataforma de ingeniería y análisis inmobiliario
+        </p>
+
+        <p style={{ marginTop: "10px", color: "#ccc" }}>
+          Evita comprar inmuebles con errores ocultos
+        </p>
 
         <a href={whatsappLink} target="_blank">
-          <Button style={{ marginTop: "20px" }}>
+          <button style={{
+            marginTop: "25px",
+            padding: "15px 25px",
+            fontSize: "16px",
+            background: "#25D366",
+            color: "white",
+            border: "none",
+            borderRadius: "10px",
+            cursor: "pointer"
+          }}>
             💬 WhatsApp
-          </Button>
+          </button>
         </a>
       </div>
 
       {/* ABOUT */}
-      <div style={{ padding: "40px", maxWidth: "800px", margin: "auto" }}>
+      <div style={{ padding: "50px", maxWidth: "800px", margin: "auto" }}>
         <h2>🧠 ¿Qué es KONKRETO?</h2>
         <p>
-          KONKRETO S.A.S. es una firma de análisis inmobiliario que evalúa riesgos técnicos, legales y de inversión antes de tomar decisiones.
+          KONKRETO S.A.S. es una firma de análisis inmobiliario que evalúa riesgos técnicos,
+          legales y de inversión antes de tomar decisiones.
         </p>
       </div>
 
       {/* SERVICES */}
-      <div style={{ padding: "40px", background: "#fafafa" }}>
-        <h2>🧩 Servicios</h2>
-        <ul>
+      <div style={{ background: "#f5f5f5", padding: "50px" }}>
+        <h2 style={{ textAlign: "center" }}>🧩 Servicios</h2>
+
+        <ul style={{ maxWidth: "600px", margin: "auto", lineHeight: "2" }}>
           <li>🔍 Due Diligence Inmobiliaria</li>
           <li>🏗️ Diagnóstico técnico</li>
           <li>📊 Viabilidad de inversión</li>
@@ -41,20 +58,31 @@ export default function KonkretoLanding() {
         </ul>
       </div>
 
+      {/* MISSION */}
+      <div style={{ padding: "50px", textAlign: "center" }}>
+        <h2>🎯 Nuestra misión</h2>
+        <p style={{ maxWidth: "700px", margin: "auto" }}>
+          Proteger a inversionistas y compradores inmobiliarios evitando pérdidas económicas
+          mediante análisis técnico, legal y financiero de cada inmueble.
+        </p>
+      </div>
+
       {/* PRICING */}
-      <div style={{ padding: "40px" }}>
+      <div style={{ background: "#f5f5f5", padding: "50px", textAlign: "center" }}>
         <h2>💰 Planes y precios</h2>
-        <ul>
-          <li>🔍 Básico: $400.000 COP</li>
-          <li>📊 Intermedio: $800.000 COP</li>
-          <li>🏗️ Completo: $1.500.000 COP</li>
-        </ul>
+
+        <div style={{ lineHeight: "2" }}>
+          <p>🔍 Básico: $400.000 COP</p>
+          <p>📊 Intermedio: $800.000 COP</p>
+          <p>🏗️ Completo: $1.500.000 COP</p>
+        </div>
       </div>
 
       {/* PROCESS */}
-      <div style={{ padding: "40px", background: "#fafafa" }}>
-        <h2>⚙️ Cómo trabajamos</h2>
-        <ol>
+      <div style={{ padding: "50px" }}>
+        <h2 style={{ textAlign: "center" }}>⚙️ Cómo trabajamos</h2>
+
+        <ol style={{ maxWidth: "600px", margin: "auto", lineHeight: "2" }}>
           <li>Nos contactas por WhatsApp</li>
           <li>Analizamos el caso</li>
           <li>Evaluamos el inmueble</li>
@@ -63,14 +91,27 @@ export default function KonkretoLanding() {
       </div>
 
       {/* CTA */}
-      <div style={{ textAlign: "center", padding: "60px", background: "#111", color: "white" }}>
+      <div style={{
+        textAlign: "center",
+        padding: "80px",
+        background: "#111",
+        color: "white"
+      }}>
         <h2>🚀 ¿Quieres evaluar tu inmueble?</h2>
         <p>Recibe un análisis profesional antes de decidir</p>
 
         <a href={whatsappLink} target="_blank">
-          <Button>
+          <button style={{
+            marginTop: "20px",
+            padding: "15px 25px",
+            fontSize: "16px",
+            background: "#25D366",
+            color: "white",
+            border: "none",
+            borderRadius: "10px"
+          }}>
             💬 Hablar ahora
-          </Button>
+          </button>
         </a>
       </div>
 
