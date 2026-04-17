@@ -1,94 +1,131 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>KONKRETO - Inmobiliaria</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+export default function Home() {
+  const phone = "573246844406"; // ← CAMBIA ESTO
+  const message = "Hola, vi tu página de KONKRETO y quiero información";
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      text-align: center;
-    }
+  return (
+    <main style={{ fontFamily: "Arial, sans-serif" }}>
 
-    .hero {
-      background: #0f172a;
-      color: white;
-      padding: 60px 20px;
-    }
+      {/* HERO */}
+      <section style={{
+        background: "#0f172a",
+        color: "white",
+        padding: "80px 20px",
+        textAlign: "center"
+      }}>
+        <h1 style={{ fontSize: "36px" }}>
+          🏡 Compra, vende o arrienda en Cartagena sin riesgos
+        </h1>
 
-    .hero h1 {
-      font-size: 32px;
-    }
+        <p style={{ fontSize: "18px", marginTop: "20px" }}>
+          Te acompaño en todo el proceso inmobiliario: desde encontrar el inmueble ideal hasta validar documentos y cerrar con seguridad.
+        </p>
 
-    .hero p {
-      margin: 20px 0;
-      font-size: 18px;
-    }
+        <a href={whatsappLink} target="_blank" style={{
+          display: "inline-block",
+          marginTop: "30px",
+          background: "#25D366",
+          color: "white",
+          padding: "15px 25px",
+          borderRadius: "8px",
+          textDecoration: "none",
+          fontSize: "18px"
+        }}>
+          👉 Hablar por WhatsApp ahora
+        </a>
 
-    .btn {
-      background: #25D366;
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      display: inline-block;
-    }
+        <p style={{ marginTop: "20px" }}>
+          ⚡ Respuesta rápida | 📍 Cartagena | 🔒 Proceso seguro
+        </p>
+      </section>
 
-    .section {
-      padding: 40px 20px;
-    }
+      {/* PROBLEMA */}
+      <section style={{ padding: "50px 20px", textAlign: "center" }}>
+        <h2>¿Por qué necesitas asesoría?</h2>
+        <p style={{ maxWidth: "600px", margin: "auto" }}>
+          Comprar o arrendar sin información puede generar pérdidas, problemas legales o malas decisiones.
+          Nosotros te ayudamos a tomar decisiones seguras y con respaldo.
+        </p>
+      </section>
 
-    .card {
-      background: white;
-      margin: 10px auto;
-      padding: 20px;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
+      {/* SERVICIOS */}
+      <section style={{ background: "#f5f5f5", padding: "50px 20px", textAlign: "center" }}>
+        <h2>Servicios</h2>
 
-    .footer {
-      padding: 20px;
-      font-size: 14px;
-      color: gray;
-    }
-  </style>
-</head>
+        <div style={{ maxWidth: "700px", margin: "auto" }}>
+          {[
+            "📌 Captación de inmuebles: conectamos propietarios con clientes reales",
+            "📊 Análisis del inmueble: evaluamos precio, zona y rentabilidad",
+            "🔍 Due diligence básica: revisión de documentos y estado legal",
+            "📢 Comercialización: publicidad, marketing y cierre"
+          ].map((item, i) => (
+            <div key={i} style={{
+              background: "white",
+              margin: "10px 0",
+              padding: "20px",
+              borderRadius: "10px",
+              boxShadow: "0 5px 10px rgba(0,0,0,0.1)"
+            }}>
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
 
-<body>
+      {/* COMO FUNCIONA */}
+      <section style={{ padding: "50px 20px", textAlign: "center" }}>
+        <h2>¿Cómo funciona?</h2>
 
-  <div class="hero">
-    <h1>🏡 Compra, vende o arrienda en Cartagena sin riesgos</h1>
-    <p>Asesoría inmobiliaria con análisis y verificación real</p>
+        <div style={{ maxWidth: "600px", margin: "auto" }}>
+          <p>1️⃣ Nos escribes por WhatsApp</p>
+          <p>2️⃣ Analizamos tu necesidad (compra, arriendo o venta)</p>
+          <p>3️⃣ Te presentamos opciones o estrategia</p>
+          <p>4️⃣ Te acompañamos hasta el cierre</p>
+        </div>
+      </section>
 
-    <a class="btn" href="https://wa.me/573246844406?text=Hola,%20vi%20tu%20pagina%20y%20quiero%20informacion" target="_blank">
-      👉 Hablar por WhatsApp ahora
-    </a>
+      {/* CONFIANZA */}
+      <section style={{ background: "#0f172a", color: "white", padding: "50px 20px", textAlign: "center" }}>
+        <h2>Confianza</h2>
+        <p>
+          Estamos conectando propietarios con interesados reales en Cartagena,
+          brindando acompañamiento y análisis en cada operación.
+        </p>
+      </section>
 
-    <p>⚡ Respuesta rápida | 📍 Cartagena | 🔒 Proceso seguro</p>
-  </div>
+      {/* CTA FINAL */}
+      <section style={{ padding: "60px 20px", textAlign: "center" }}>
+        <h2>¿Listo para avanzar?</h2>
 
-  <div class="section">
-    <h2>Servicios</h2>
+        <a href={whatsappLink} target="_blank" style={{
+          display: "inline-block",
+          marginTop: "20px",
+          background: "#25D366",
+          color: "white",
+          padding: "15px 25px",
+          borderRadius: "8px",
+          textDecoration: "none",
+          fontSize: "18px"
+        }}>
+          💬 Escríbeme ahora
+        </a>
+      </section>
 
-    <div class="card">📌 Captación de inmuebles</div>
-    <div class="card">📊 Análisis del inmueble</div>
-    <div class="card">🔍 Due diligence básica</div>
-    <div class="card">📢 Comercialización efectiva</div>
-  </div>
+      {/* BOTÓN FLOTANTE */}
+      <a href={whatsappLink} target="_blank" style={{
+        position: "fixed",
+        bottom: "20px",
+        right: "20px",
+        background: "#25D366",
+        color: "white",
+        padding: "15px",
+        borderRadius: "50%",
+        fontSize: "20px",
+        textDecoration: "none"
+      }}>
+        💬
+      </a>
 
-  <div class="section">
-    <h2>Confianza</h2>
-    <p>Conectamos propietarios con clientes reales cada semana</p>
-  </div>
-
-  <div class="footer">
-    KONKRETO S.A.S. - Cartagena
-  </div>
-
-</body>
-</html>
+    </main>
+  );
+}
