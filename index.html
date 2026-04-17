@@ -1,131 +1,51 @@
-export default function Home() {
-  const phone = "573246844406"; // ← CAMBIA ESTO
-  const message = "Hola, vi tu página de KONKRETO y quiero información";
-  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>KONKRETO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  return (
-    <main style={{ fontFamily: "Arial, sans-serif" }}>
+  <style>
+    body { font-family: Arial; margin: 0; background: #f5f5f5; text-align: center; }
+    .hero { background: #0f172a; color: white; padding: 60px 20px; }
+    .btn { background: #25D366; color: white; padding: 15px 25px; text-decoration: none; border-radius: 8px; display: inline-block; margin-top: 20px;}
+    .section { padding: 40px 20px; }
+  </style>
+</head>
 
-      {/* HERO */}
-      <section style={{
-        background: "#0f172a",
-        color: "white",
-        padding: "80px 20px",
-        textAlign: "center"
-      }}>
-        <h1 style={{ fontSize: "36px" }}>
-          🏡 Compra, vende o arrienda en Cartagena sin riesgos
-        </h1>
+<body>
 
-        <p style={{ fontSize: "18px", marginTop: "20px" }}>
-          Te acompaño en todo el proceso inmobiliario: desde encontrar el inmueble ideal hasta validar documentos y cerrar con seguridad.
-        </p>
+<div class="hero">
+  <h1>🏡 Compra, vende o arrienda en Cartagena sin riesgos</h1>
+  <p>Te ayudo a encontrar, analizar y cerrar negocios inmobiliarios seguros</p>
 
-        <a href={whatsappLink} target="_blank" style={{
-          display: "inline-block",
-          marginTop: "30px",
-          background: "#25D366",
-          color: "white",
-          padding: "15px 25px",
-          borderRadius: "8px",
-          textDecoration: "none",
-          fontSize: "18px"
-        }}>
-          👉 Hablar por WhatsApp ahora
-        </a>
+  <a class="btn" href="https://wa.me/573246844406?text=Hola%20quiero%20informacion" target="_blank">
+    👉 Hablar por WhatsApp
+  </a>
 
-        <p style={{ marginTop: "20px" }}>
-          ⚡ Respuesta rápida | 📍 Cartagena | 🔒 Proceso seguro
-        </p>
-      </section>
+  <p>⚡ Respuesta rápida | 📍 Cartagena | 🔒 Proceso seguro</p>
+</div>
 
-      {/* PROBLEMA */}
-      <section style={{ padding: "50px 20px", textAlign: "center" }}>
-        <h2>¿Por qué necesitas asesoría?</h2>
-        <p style={{ maxWidth: "600px", margin: "auto" }}>
-          Comprar o arrendar sin información puede generar pérdidas, problemas legales o malas decisiones.
-          Nosotros te ayudamos a tomar decisiones seguras y con respaldo.
-        </p>
-      </section>
+<div class="section">
+  <h2>¿Qué hago?</h2>
+  <p>Te acompaño desde la búsqueda hasta el cierre del negocio</p>
+</div>
 
-      {/* SERVICIOS */}
-      <section style={{ background: "#f5f5f5", padding: "50px 20px", textAlign: "center" }}>
-        <h2>Servicios</h2>
+<div class="section">
+  <h2>Servicios</h2>
+  <p>📌 Captación de inmuebles</p>
+  <p>📊 Análisis del inmueble</p>
+  <p>🔍 Revisión de documentos</p>
+  <p>📢 Comercialización</p>
+</div>
 
-        <div style={{ maxWidth: "700px", margin: "auto" }}>
-          {[
-            "📌 Captación de inmuebles: conectamos propietarios con clientes reales",
-            "📊 Análisis del inmueble: evaluamos precio, zona y rentabilidad",
-            "🔍 Due diligence básica: revisión de documentos y estado legal",
-            "📢 Comercialización: publicidad, marketing y cierre"
-          ].map((item, i) => (
-            <div key={i} style={{
-              background: "white",
-              margin: "10px 0",
-              padding: "20px",
-              borderRadius: "10px",
-              boxShadow: "0 5px 10px rgba(0,0,0,0.1)"
-            }}>
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
+<div class="section">
+  <h2>¿Cómo funciona?</h2>
+  <p>1. Me escribes</p>
+  <p>2. Analizo tu caso</p>
+  <p>3. Te doy opciones</p>
+  <p>4. Cerramos contigo</p>
+</div>
 
-      {/* COMO FUNCIONA */}
-      <section style={{ padding: "50px 20px", textAlign: "center" }}>
-        <h2>¿Cómo funciona?</h2>
-
-        <div style={{ maxWidth: "600px", margin: "auto" }}>
-          <p>1️⃣ Nos escribes por WhatsApp</p>
-          <p>2️⃣ Analizamos tu necesidad (compra, arriendo o venta)</p>
-          <p>3️⃣ Te presentamos opciones o estrategia</p>
-          <p>4️⃣ Te acompañamos hasta el cierre</p>
-        </div>
-      </section>
-
-      {/* CONFIANZA */}
-      <section style={{ background: "#0f172a", color: "white", padding: "50px 20px", textAlign: "center" }}>
-        <h2>Confianza</h2>
-        <p>
-          Estamos conectando propietarios con interesados reales en Cartagena,
-          brindando acompañamiento y análisis en cada operación.
-        </p>
-      </section>
-
-      {/* CTA FINAL */}
-      <section style={{ padding: "60px 20px", textAlign: "center" }}>
-        <h2>¿Listo para avanzar?</h2>
-
-        <a href={whatsappLink} target="_blank" style={{
-          display: "inline-block",
-          marginTop: "20px",
-          background: "#25D366",
-          color: "white",
-          padding: "15px 25px",
-          borderRadius: "8px",
-          textDecoration: "none",
-          fontSize: "18px"
-        }}>
-          💬 Escríbeme ahora
-        </a>
-      </section>
-
-      {/* BOTÓN FLOTANTE */}
-      <a href={whatsappLink} target="_blank" style={{
-        position: "fixed",
-        bottom: "20px",
-        right: "20px",
-        background: "#25D366",
-        color: "white",
-        padding: "15px",
-        borderRadius: "50%",
-        fontSize: "20px",
-        textDecoration: "none"
-      }}>
-        💬
-      </a>
-
-    </main>
-  );
-}
+</body>
+</html>
