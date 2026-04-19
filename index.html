@@ -5,7 +5,7 @@ export default function KonkretoLanding() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hola%20quiero%20evaluar%20un%20inmueble%20con%20KONKRETO`;
 
   return (
-    <div style={{ fontFamily: "Arial", textAlign: "center", padding: 50 }}>
+    <div>
 
       <h1>🏢 KONKRETO SAS</h1>
 
@@ -13,18 +13,8 @@ export default function KonkretoLanding() {
 
       <p>“Convertimos inmuebles en decisiones técnicas seguras”</p>
 
-      <a href={whatsappLink} target="_blank" rel="noreferrer">
-        <button style={{
-          marginTop: 20,
-          padding: 15,
-          background: "#25D366",
-          color: "white",
-          border: "none",
-          borderRadius: 10,
-          cursor: "pointer"
-        }}>
-          💬 Evaluar inmueble ahora
-        </button>
+      <a href={whatsappLink} target="_blank">
+        💬 Evaluar inmueble ahora
       </a>
 
     </div>
